@@ -1,7 +1,8 @@
+\documentclass[a4paper,12pt]{article}
 
 \input{documentTemplate.tex}
-\newcommand{\labdate}{\today}
-\newcommand{\temat}{Echo}
+\newcommand{\labdate}{25 listopada 2020}
+\newcommand{\temat}{Właściwości sprężyste}
 
 \begin{document}
     
@@ -10,11 +11,144 @@
 
 \section{Cel ćwiczenia}
 
+Celem ćwiczenia było zapoznanie się  metoda cienia (przepuszczania) oraz wyznaczanie modułów Younga, Kirhoffa oraz liczby Poissona dla materiałów izotropowych.
+
 \section{Wprowadzenie}
+
+Jedną z metod ultradźwiękowych jest metoda cienia (przepuszczania). Metoda ta polega na wprowadzeniu fal ultradźwiękowych z jednej strony badanego materiału i odbieraniu ich z drugiej strony po przejściu przez materiał, podczas obserwacji natężenia fal przechodzących. Każda wada w badanym materiale odbija falę ultradźwiękową tworząc tak jakby cień, zatem fala przechodząca jest osłabiona i głowica odbiorcza odbiera falę o mniejszej intensywności.
+
+W metodzie używa się dwóch takich samych głowic ustawionych prostopadle (najczęściej) lub skośnie. Sygnał prowadzonych z głowicy odbiorczej do detektora, a z niego do lampy oscyloskopowej. Obecność wady można zauważyć poprzez zmianę sygnału odbieranego przez głowice odbiorczą.
+
+Wadą tej metody jet niemożliwe określenia położenia wady. Dodatkowo takie same wady, będące w innych miejscach próbki będą inaczej osłabiać wiązkę fal ultradźwiękowych na skutek tworzenia się cienia. Kolejną wadą jest konieczność ustawiania głowic centrycznie. Zaletą tej metody jest wykrywanie wad blisko powierzchni materiału wad, które są różnie zorientowane w przestrzeni.
+\newline
+
+Źródło: Materiały otrzymane przez prowadzącego "Metody Badań, Badania Ultradźwiękowe" dr. Jan Piekarczyk
 
 \section{Aparatura i materiały}
 
+Aparatura:
+
+\begin{itemize}
+    \item defektoskop ultradźwiękowy  DI-40
+    \item ośrodki sprzęgające: olej do fal podłużnych i balsam kanadyjski do fal poprzecznych.
+    \item suwmiarka
+    \item waga analityczna
+    \item głowica normalna do fal podłużnych $10LO^\circ10C$
+    \item głowica skośna do fal poprzecznych 3T
+\end{itemize} 
+ 
+ Materiały:
+ 
+ \begin{itemize}
+     \item wzorzec stalowy $2\mu s$
+     \item $Al_2O_3$ sześcian 
+     \item $Al_2O_3$ prostopadłościan krótki
+     \item $Al_2O_3$ prostopadłościan długi 
+     \item SiC
+     \item $ZrO_2$
+     \item Żywica epoksydowa 
+     \item Stal 
+ \end{itemize}
+\newpage
+ 
 \section{Wyniki i obliczenia}
+
+\subsection{Wyznaczanie gęstości próbek}
+
+Zmierzyliśmy suwmiarką oraz zważyliśmy na wadze otrzymane próbki, przedstawione na schematach poniżej. Otrzymane wielkości i masę zapisaliśmy w tabeli 1. 
+Na podstawie tych pomiarów policzyliśmy objętość i gęstość badanych materiałów.
+
+\input{gestosc}
+
+\subsection{Wyznaczanie prędkości propagacji podłużnej fali ultradźwiękowej $(C_L)$}
+
+Zgodnie z instrukcją ustawiono defektoskop na pomiar drogi przy zastosowaniu fali podłużnej. Przy użyciu dwóch głowic $10LO^\circ10C$ ustawionych jednoosiowo (jedna z nich została umieszczona na statywie, a drugą umieszczono tak, aby zachować jednoosiowość), przeprowadzono pomiar dla poszczególnych kierunków w każdej próbce. Podczas pomiaru dla fali podłużnej używano oleju. Otrzymane wyniki pomiarów zamieszczono w tabeli 2.
+
+Posiadając pomiary długości fali obliczyliśmy wartości średnie czasu i odchylenie standardowe każdej z próbek, w każdym kierunku pomiarowym. Wyniki obliczeń również podaliśmy w tabeli 2.
+
+\input{podl_tsr}
+
+\input{podl_wzorzec}
+
+Na podstawie wyników zamieszczonych w tabeli 3 dla wzorca $2\mu s$ określiliśmy położenie zera aparatu na podstawie wzoru:
+
+$$c=\cfrac{\theta _{sred}}{2}-t_{sred}$$
+
+$$c=-0.3$$
+
+Określiliśmy współczynnik skali $b$ ze wzoru:
+
+$$b=\cfrac{4}{\theta _{sred}}$$
+
+$$b=0.32$$
+
+Dla wzorca $2\mu s$ oraz dla wszystkich próbek obliczyliśmy rzeczywisty czas przejścia podłużnej fali ultradźwiękowej ($t_{rzeczywiste}$) oraz prędkość rozchodzenia się podłużnej fali ultradźwiękowej ($C_L$) ze wzorów:
+
+$$t_{rzeczywiste}=(t_{sred}+c)\cdot b$$
+
+$$C_L=\cfrac{d}{t_{rzeczywiste}}$$
+
+Otrzymane wyniki zamieściłyśmy w tabeli 4.
+
+\input{podl_rzeczywiste}
+
+\subsection{Wyznaczanie prędkości propagacji poprzecznej fali ultradźwiękowej $(C_T)$}
+
+Zmieniono ustawienie defektoskopu na odpowiednie dla fali poprzecznej. Używano dwóch głowic $3T0^\circ$  i balsamu kanadyjskiego. Wykonano pomiar. Wyniki umieszczono w tabeli 5. 
+
+\input{poprz_tsr}
+
+\input{poprz_wzorzec}
+
+Na podstawie wyników zamieszczonych w tabeli 6 dla wzorca $2\mu s$ określiliśmy położenie zera aparatu na podstawie wzoru:
+
+$$c=\cfrac{\theta _{sred}}{2}-t_{sred}$$
+
+$$c=-8.0$$
+
+Określiliśmy współczynnik skali $b$ ze wzoru:
+
+$$b=\cfrac{4}{\theta _{sred}}$$
+
+$$b=0.40$$
+
+Dla wzorca $2\mu s$ oraz dla wszystkich próbek obliczyliśmy rzeczywisty czas przejścia poprzecznej fali ultradźwiękowej ($t_{rzeczywiste}$) oraz prędkość rozchodzenia się poprzecznej fali ultradźwiękowej ($C_T$) ze wzorów:
+
+$$t_{rzeczywiste}=(t_{sred}+c)\cdot b$$
+
+$$C_T=\cfrac{d}{t_{rzeczywiste}}$$
+
+Otrzymane wyniki zamieściłyśmy w tabeli 7.
+
+\input{poprz_rzeczywiste}
+
+\subsection{Wyznaczanie stałych materiałowych}
+
+Po przeanalizowaniu uzyskanych wartości prędkości fal odrzuciliśmy wartość dla fali podłużnej w kierunku $a$ dla prostopadłościanu długiego $Al_2O_3$, ponieważ odbiegała ona znacząco od pozostałych wyników dla tego materiału.
+
+\input{staleC}
+
+Wyliczyliśmy stałe materiałowe ze wzorów obowiązujących dla ośrodka trójwymiarowego:
+
+$$E=C_L^2\cdot \rho \cdot \cfrac{(1+\mu)(1-2\mu)}{(1-\mu)}$$
+
+$$G=C_T^2\cdot \rho$$
+
+$$\mu = \cfrac{C_L^2-2C_T^2}{2\cdot (C_L^2-C_T^2)}$$
+
+gdzie:
+
+$E$ - moduł Younga $[GPa]$
+
+$G$ - moduł Kirchhoffa $[GPa]$
+
+$\mu$ - współczynnik Poissona
+
+\input{stale_policzone}
+
+Aby sprawdzić, czy badane próbki spełniają warunek ośrodka trójwymiarowego obliczyłyśmy długość przechodzącej podłużnej fali ultradźwiękowej dla każdej próbki według wzoru:
+
+$$\lambda=\cfrac{C_L}{f}$$
 
 \section{Podsumowanie i wnioski}
 
