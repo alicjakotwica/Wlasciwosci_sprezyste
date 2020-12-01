@@ -1,0 +1,32 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{polski}
+\usepackage{helvet}
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+% dodaj bibliografię do spisu treści
+\usepackage[nottoc]{tocbibind}
+% unikaj pojedynczych linii na początku/ końcu stron
+\usepackage[defaultlines=4,all]{nowidow}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% set default figure placement to !htbp
+\makeatletter
+\def\fps@figure{!htbp}
+\makeatother
+
+
+\newcommand{\setSubtitle}[1]{
+    \newcommand{\subtitle}{#1}
+    }
